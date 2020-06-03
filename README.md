@@ -11,7 +11,7 @@ This project develops an intermittent operating system (OS) to preserve computat
 
 
 The intermittent OS is built upon FreeRTOS, a real-time operating system supporting many kinds of commercial microcontrollers, running
-on MSP-EXP430FR5994 LaunchPad, a Texas Instruments platform featuring 256KB FRAM and 8KB on-chip SRAM. We add a data manager and a recovery handler in FreeRTOS, so that the system runtime can cope with intermittence and exempts application developers from this responsibility. Due to the limitation of the memory size, the current implementation supports up to 10 user tasks and 16 data objects. For more technical details, please refer to [our paper](https://arxiv.org/pdf/1910.04949.pdf "link") and [its previous version](https://www.citi.sinica.edu.tw/papers/pchsiu/6715-F.pdf "link").
+on MSP-EXP430FR5994 LaunchPad, a Texas Instruments platform featuring 256KB FRAM and 8KB on-chip SRAM. We add a data manager and a recovery handler in FreeRTOS, so that the system runtime can cope with intermittence and exempts application developers from this responsibility. Due to the limitation of the memory size, the current implementation supports up to 10 user tasks and 16 data objects. For more technical details, please refer to [our paper](https://www.citi.sinica.edu.tw/papers/pchsiu/7157-F.pdf "link") and [its previous version](https://www.citi.sinica.edu.tw/papers/pchsiu/6715-F.pdf "link").
 
 <p align="center">
 <img src="https://github.com/meenchen/failure-resilient-OS/blob/master/SystemOverview.jpg" width="720">
