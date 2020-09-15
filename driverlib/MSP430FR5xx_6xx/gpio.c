@@ -59,55 +59,18 @@ static const uint16_t GPIO_PORT_TO_BASE[] = {
 #else
     0xFFFF,
 #endif
-#if defined(__MSP430_HAS_PORT2_R__)
-    __MSP430_BASEADDRESS_PORT2_R__,
-#elif defined(__MSP430_HAS_PORT2__)
-    __MSP430_BASEADDRESS_PORT2__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT3_R__)
-    __MSP430_BASEADDRESS_PORT3_R__,
-#elif defined(__MSP430_HAS_PORT3__)
-    __MSP430_BASEADDRESS_PORT3__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT4_R__)
-    __MSP430_BASEADDRESS_PORT4_R__,
-#elif defined(__MSP430_HAS_PORT4__)
-    __MSP430_BASEADDRESS_PORT4__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT5_R__)
-    __MSP430_BASEADDRESS_PORT5_R__,
-#elif defined(__MSP430_HAS_PORT5__)
-    __MSP430_BASEADDRESS_PORT5__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT6_R__)
-    __MSP430_BASEADDRESS_PORT6_R__,
-#elif defined(__MSP430_HAS_PORT6__)
-    __MSP430_BASEADDRESS_PORT6__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT7_R__)
-    __MSP430_BASEADDRESS_PORT7_R__,
-#elif defined(__MSP430_HAS_PORT7__)
-    __MSP430_BASEADDRESS_PORT7__,
-#else
-    0xFFFF,
-#endif
-#if defined(__MSP430_HAS_PORT8_R__)
-    __MSP430_BASEADDRESS_PORT8_R__,
-#elif defined(__MSP430_HAS_PORT8__)
-    __MSP430_BASEADDRESS_PORT8__,
-#else
-    0xFFFF,
-#endif
+    /*
+     * Somehow since CCStudio 10.1, msp430fr5994.h no longer contains macros
+     * for GPIO port 2~8, and thus breaking UART functionality. Use hard-coded
+     * values from CCStudio 10.0 to work-around it.
+     */
+    0x200, // port 2
+    0x220, // port 3
+    0x220, // port 4
+    0x240, // port 5
+    0x240, // port 6
+    0x260, // port 7
+    0x260, // port 8
 #if defined(__MSP430_HAS_PORT9_R__)
     __MSP430_BASEADDRESS_PORT9_R__,
 #elif defined(__MSP430_HAS_PORT9__)
